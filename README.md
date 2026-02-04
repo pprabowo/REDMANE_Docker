@@ -83,7 +83,7 @@ git clone -b 13-semester2_2025 https://github.com/WEHI-RCPStudentInternship/REDM
 # Backend
 git clone -b 13-2025-Semester-2 https://github.com/WEHI-RCPStudentInternship/REDMANE_fastapi.git
 
-# Database initialization scripts
+# Database initialisation scripts
 git clone -b sem_2_2025 https://github.com/WEHI-RCPStudentInternship/REDMANE_fastapi_public_data.git REDMANE_fastapi/data/REDMANE_fastapi_public_data
 ```
 
@@ -103,11 +103,11 @@ docker compose up --build -d
 
 ### 5. Verify deployment
 
-- Frontend: access `https://data-registry.wehi-rcp.cloud.edu.au/projects` on an incognito browser (so that caches are not saved)
+- Frontend: access `https://data-registry.wehi-rcp.cloud.edu.au/projects` on an incognito browser (so that caches are not saved and you can test builds more accurately)
 - Backend API: perform this on your terminal:
 ```bash
 curl https://data-registry.wehi-rcp.cloud.edu.au/projects # if SSL certs have been obtained
-curl -k https://data-registry.wehi-rcp.cloud.edu.au/projects # if SSL certs have not been obtained, or in local/staging STAGE
+curl -k https://data-registry.wehi-rcp.cloud.edu.au/projects # in local/staging STAGE
 ```
 
 ## Configuration Details
