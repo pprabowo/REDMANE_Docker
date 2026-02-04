@@ -71,7 +71,7 @@ It is a ready-to-use docker image that combines the functionality of nginx (reve
 
 ```bash
 cd REDMANE
-git clone https://github.com:WEHI-RCPStudentInternship/REDMANE_Docker.git .
+git clone https://github.com/WEHI-RCPStudentInternship/REDMANE_Docker.git .
 ```
 
 ### 2. Clone the application repositories (DRAFT)
