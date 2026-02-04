@@ -83,8 +83,9 @@ git clone -b sem_2_2025 https://github.com/WEHI-RCPStudentInternship/REDMANE_fas
 
 Before starting, verify the following in `docker-compose.yaml`:
 - `STAGE` is set appropriately (`local`, `staging`, or `production`)
-- Database credentials match your requirements
-- Domain name in https-portal DOMAINS matches your setup
+  - Do not use 'production' unless the setup has been successfully tested in staging. 'production' will hit the production side of Let's Encrypt and they have rate limits
+- Database credentials match other parts of the backend and database codes
+- Domain name in https-portal container's DOMAINS variable matches your setup
 
 ### 4. Start the stack
 
