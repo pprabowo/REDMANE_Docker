@@ -152,7 +152,7 @@ docker compose up --build -d
 **Step 1: Backup current database (optional but recommended)**
 ```bash
 # Creates a timestamped backup file
-docker exec redmane-db pg_dump -U postgres readmedatabase > ~/REDMANE/backups/backup_$(date +%Y%m%d_%H%M%S).sql
+docker exec redmane-db pg_dump -U postgres readmedatabase > ~/REDMANE/backups/database_backup_$(date +%Y%m%d_%H%M%S).sql
 ```
 
 **Step 2: Reset the database**
