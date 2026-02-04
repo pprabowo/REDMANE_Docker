@@ -146,3 +146,23 @@ docker compose logs -f [service_name]
 docker compose down
 docker compose up --build -d
 ```
+
+### Re-run the database initialisation script
+
+**Step 1: Backup current database (optional but recommended)**
+```bash
+# Creates a timestamped backup file
+docker exec redmane-db pg_dump -U postgres readmedatabase > ~/REDMANE/backups/backup_$(date +%Y%m%d_%H%M%S).sql
+```
+
+**Step 2: Reset the database**
+```bash
+# Stop all containers
+docker compose down
+
+# Remove the postgres volume specifically to trigger initialisation
+docker volume rm redmane_postgres_data 
+
+# Bring everything back up
+docker compose up -d
+```
