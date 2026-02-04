@@ -3,7 +3,8 @@ server {
   http2 on; # Replaces old 'listen 443 ssl http2' which throws deprecation warning
   server_name data-registry.wehi-rcp.cloud.edu.au;
 
-  # Change domain name and stage name for Data Registry VM later on
+  # Change domain name and stage name if testing outside the Data Registry VM
+  # and if https-portal on docker-compose is not on production STAGE
   ssl_certificate /var/lib/https-portal/data-registry.wehi-rcp.cloud.edu.au/production/chained.crt;
   ssl_certificate_key /var/lib/https-portal/data-registry.wehi-rcp.cloud.edu.au/production/domain.key;
   

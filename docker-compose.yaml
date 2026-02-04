@@ -45,7 +45,7 @@ services:
     environment:
       # Routes to frontend container
       DOMAINS: 'data-registry.wehi-rcp.cloud.edu.au -> http://frontend:5173'
-      # Do not use production until ready because Let's Encrypt has rate limit
+      # Do not use production until ready because Let's Encrypt has rate limits
       STAGE: 'production' # local, 'staging', 'production'
     volumes:
       - https-portal-data:/var/lib/https-portal
